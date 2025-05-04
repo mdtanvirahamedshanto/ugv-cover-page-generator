@@ -221,13 +221,9 @@ export default function PdfGeneratorTwo(): JSX.Element {
   );
 // Ensure PDFViewer is only rendered on client side
 const PDFPreview = () => {
-  const [isClient, setIsClient] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [pdfUrl, setPdfUrl] = useState('');
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -287,9 +283,9 @@ console.log("pdf url", pdfUrl);
   );
 };
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 bg-gray-50 rounded-lg shadow">
+    <div className="w-full max-w-7xl mx-auto p-4 bg-gray-50 rounded-lg shadow">
       <div className="text-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">UGV Assignment Cover Page - Template 2</h1>
+        <h1 className="text-2xl font-bold text-gray-800">UGV Assignment Cover Page</h1>
         <p className="text-gray-600">Fill in the details to generate your assignment cover page</p>
       </div>
       
